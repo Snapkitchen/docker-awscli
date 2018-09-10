@@ -1,0 +1,6 @@
+# osx spotlight index
+.DS_Store
+
+# ide files
+.vscode/*
+.vscode/
