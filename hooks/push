@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -ex
+
+awscli_versions=($(cat awscli-versions))
+
+for awscli_version in "${awscli_versions[@]}"
+do
+  echo "pushing image for version ${awscli_version}"
+  docker push "${DOCKER_REPO}:${awscli_version}"
+done

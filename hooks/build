@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -ex
+
+awscli_versions=($(cat awscli-versions))
+
+for awscli_version in "${awscli_versions[@]}"
+do
+  echo "building image for version ${awscli_version}"
+    docker build \
+        --build-arg AWSCLI_VERSION="${awscli_version}" \
+        --tag "${DOCKER_REPO}:${awscli_version}" \
+        .
+done
