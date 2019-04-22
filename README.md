@@ -33,7 +33,7 @@ to pass credentials, either:
       -e "AWS_ACCESS_KEY_ID=MYACCESSKEY" \
       -e "AWS_SECRET_ACCESS_KEY=MYSECRETKEY" \
       -e "AWS_DEFAULT_REGION=us-east-1" \
-      snapkitchen/awscli:latest \
+      snapkitchen/awscli:${VERSION} \
       s3 ls s3://example-bucket
   ```
 
@@ -44,7 +44,7 @@ OR
   ```
   docker run --rm \
       -v "${HOME}/.aws:/root/.aws" \
-      snapkitchen/awscli:latest \
+      snapkitchen/awscli:${VERSION} \
       s3 ls s3://example-bucket
   ```
 
@@ -52,13 +52,13 @@ OR
 
 entrypoint is `aws`, so arguments can be specified directly, e.g.:
 
-`docker run --rm snapkitchen/awscli:latest --version`
+`docker run --rm snapkitchen/awscli:${VERSION} --version`
 
 ### one-off commands
 
 example `aws s3 ls` using `docker run`
 
-`docker run --rm snapkitchen/awscli:latest s3 ls s3://example-bucket`
+`docker run --rm snapkitchen/awscli:${VERSION} s3 ls s3://example-bucket`
 
 ## development
 
