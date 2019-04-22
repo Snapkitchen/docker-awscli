@@ -22,10 +22,6 @@ to run a specific tagged version of the awscli, specify the version in the docke
 
 `snapkitchen/awscli:${VERSION}`
 
-to run the newest awscli version that has been built and tagged, use the `latest` docker tag, e.g.:
-
-`snapkitchen/awscli:latest`
-
 ### specifying credentials
 
 to pass credentials, either:
@@ -66,13 +62,6 @@ example `aws s3 ls` using `docker run`
 
 ## development
 
-builds are automatically handled by [docker hub](https://hub.docker.com/)
+builds are automatically handled by [docker hub](https://hub.docker.com/r/snapkitchen/awscli)
 
-to build and release an image for awscli, first determine the version change:
-
-- if releasing a newer version than the current version on master, update master
-
-- otherwise, create a new branch named after the version of the awscli to be built
-
-1. modify the `Dockerfile` and update the `AWSCLI_VERSION` variable value to the specified version
-2. tag the commit as the awscli version, matching the value used in the `Dockerfile`
+to build and release an image for awscli, add the relevant version to the list in `awscli-versions`
