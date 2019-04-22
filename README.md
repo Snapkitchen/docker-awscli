@@ -10,6 +10,8 @@ this is an extremely lightweight image containing:
 
 - python3
 - pip3
+- bash
+- jq
 - awscli
 
 total image size is approx 100mb

@@ -1,6 +1,9 @@
 FROM alpine:3.8
 
-RUN apk add --no-cache python3 \
+RUN apk add --no-cache \
+      bash \
+      jq \
+      python3 \
     && pip3 --no-cache-dir install --upgrade pip
 
 ARG AWSCLI_VERSION=0.0.0
