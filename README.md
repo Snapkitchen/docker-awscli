@@ -8,13 +8,14 @@ using the [alpine linux docker image](https://hub.docker.com/_/alpine/)
 
 this is an extremely lightweight image containing:
 
-- python3
-- pip3
-- bash
-- jq
 - awscli
+- bash
+- httpie
+- jq
+- pip3
+- python3
 
-total image size is approx 100mb
+total image size is approx 116mb
 
 ## usage
 
